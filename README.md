@@ -7,6 +7,7 @@ Operations used:
 - Edit
 - Delete
 - Search by
+- Sort
 
 
 Language:
