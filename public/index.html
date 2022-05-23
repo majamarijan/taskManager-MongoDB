@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset='utf-8'/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<link rel="stylesheet" href="./styles.css" />
+		<title>Home</title>
+	</head>
+	<body>
+		
+		<h1>Task Manager</h1>
+		<div class='wrapper'>
+			<div class='loader animate'></div>	
+			<h3></h3>
+			<a href='/tasks' class="linkRoute">Go To Tasks</a>
+		</div>
+		
+		<script>
+			var h3 = document.querySelector('h3');
+			var loader_ = document.getElementsByClassName('loader animate');
+			var loader = loader_[0];
+			setTimeout(()=> {
+				h3.textContent = 'Database connected!';
+				loader.classList.remove('animate');
+				loader.classList.remove('loader');
+				document.querySelector('.linkRoute').classList.remove('linkRoute')
+				console.log(loader)
+			}, 4000)
+
+
+		</script>
+
+	</body>
+</html>

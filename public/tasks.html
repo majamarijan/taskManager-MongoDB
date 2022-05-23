@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset='utf-8'/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<link rel='stylesheet' href='tasks.css' />
+		<title>Task Manager</title>
+	</head>
+	<body>
+		<h1>Tasks</h1>
+
+		<div class='backdrop hidden'></div>
+			<form class='editForm hidden'>
+				<h3>Edit Task</h3>
+				<input type='text' class='editFormInput' />
+				<button type='submit'>Save</button>
+				<button type='button'>Cancel</button>
+			</form>
+
+
+		<form id='addForm'>
+			<input required type="text" name='taskName' size='25' pattern="[a-zA-Z]{4,8}" title='4 to 8 characters minimum' />
+			<div class='dateTimeBox'>
+			<input type='date' name='taskDate' />
+			<input type='time' name='taskTime' />
+			</div>
+			<button type='submit'>Add new task</button>
+		</form>
+
+		<form id='searchForm'>
+			<input type='search' name='search' pattern="[a-zA-Z]{4,8}" title='Use letters only' />
+			<button type='submit'>Search</button>
+		</form>
+
+		<select name='searchBy'>
+				<option value=''>-- Search By --</option>
+				<option value='name_asc'>name &#8593;</option>
+				<option value='name_dsc'>name &#8595;</option>
+				<option value='date_asc'>date &#8593;</option>
+				<option value='date_dsc'>date &#8595;</option>
+			</select>
+
+		<div class='tasksInfo'>
+			<p class='loader'>Loading ...</p>
+			<div class='error hidden'>Something went wrong!</div>
+			<div class='noTasks'></div>
+		</div>
+		<div class='tasks'></div>
+
+	<script src='/script.js' type='module'></script>
+
+	</body>
+</html>

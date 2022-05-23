@@ -1,0 +1,140 @@
+#addForm {
+	display: flex;
+}
+
+.tasksInfo {
+	display: block;
+}
+
+.tasks {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+	max-height: 80vh;
+	gap: 20px;
+	padding-top: 2rem;
+}
+
+.task {
+/*	background: #eefe;
+	border-bottom: 1px solid gray;*/
+	padding: 0;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: stretch;
+	width: 80%;
+	max-width: 320px;
+}
+
+.task > p {
+	background: orange;
+	flex: 1 100%;
+	padding: 10px 20px;
+	margin: 0;
+	font-family: 'Verdana', sans-serif;
+	font-weight: bold;
+	color: rgb(9, 76, 74);
+}
+
+.task > p:hover {
+	background: rgb(242, 196, 31);
+}
+
+.dateTimeBox.invalid {
+	border: 2px solid red;
+}
+
+.dateBox {
+	background: lightgreen;
+	align-self: stretch;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	padding: 0 10px;
+}
+
+.buttonWrapper {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 5px;
+	margin-left: auto;
+}
+
+.editBtn,
+.deleteBtn {
+	border: none;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	font-weight: bold;
+	color: white;
+}
+.editBtn {
+	background: #2aa84f;
+}
+.deleteBtn {
+	background: #c90e0e;
+}
+
+.editBtn:hover,
+.deleteBtn:hover {
+	cursor: pointer;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.disabled {
+	background: lightgray;
+}
+
+.error {
+	color: red;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+input {
+	border-color: lightgray;
+}
+
+.invalid {
+	border-color: red;
+	background: salmon;
+}
+
+
+/* EDIT WRAPPER */
+.backdrop {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right:0;
+	left:0;
+	background: #000;
+	opacity: .89;
+	z-index: 100;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+.editForm {
+	position: absolute;
+	width: 100%;
+	margin-top: 30vh;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	z-index: 1000;
+}
+.editForm > h3 {
+	color: white;
+	font-weight: bold;
+	flex: 2 100%;
+	text-align: center;
+}
+ 
